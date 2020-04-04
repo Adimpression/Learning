@@ -1,6 +1,7 @@
 # Learning
 Let's just be automatons
 
+> TL;DR anybody? Look for TL;DR sections below. 7 short lines.
 
 ## Purpose
 To find purpose as an automaton, you need a master. `Adimpression` will be you master. It will tell you how to transform into an automaton; to be truly selfless and be in services of others. Is there money involved? Maybe, but it doesn't have to. More on this when you're ready.
@@ -58,16 +59,24 @@ Automaton or not, we are still developers. So let's write this in a YAML like Sy
 
 Next, let's write the inputs and outputs needed. Oh, but we've only got an output txt and don't need inputs. So let's just get to it:
 
-> Is Displayed Hello World:
->   - Is Display String
+TL;DR
+Create a YAML
+
+```
+Is Displayed Hello World:
+  - Is Display String
+```
 
 String is a type of data we would like to use. Is or Not is based on which state the 'Is Displayed Hello World' produces. 'Display' can be anything such as 'Msg' or 'Foo' or 'Bar.
 
 Are we done yet? That is actually it; just some grunt work left that's all. There's always a bit of grunt work! Here's what happens next (hold on to your seat tight):
 
+TL;DR
+```
 1. The YAML you wrote will go through this. It generates a .proto file.
 2. Then you will implement this: (few lines of code). Basically a gRPC service.
 3. Then you will build a docker image and push it to docker hub.
 4. Then you will create a file here and push it to github.
 5. Done. You are now an automaton that can say Hello World! to anybody, using any language gRPC supports. You are at their service!
+```
 
