@@ -3,7 +3,7 @@ Let's just be automatons
 
 **TL;DR anybody?**
 
-> Look for TL;DR sections below. 7 short lines.
+> Look for TL;DR sections below.
 
 ## Purpose
 To find purpose as an automaton, you need a master. `Adimpression` will be you master. It will tell you how to transform into an automaton; to be truly selfless and be in services of others. Is there money involved? Maybe, but it doesn't have to. More on this when you're ready.
@@ -61,9 +61,6 @@ Automaton or not, we are still developers. So let's write this in a YAML like Sy
 
 Next, let's write the inputs and outputs needed. Oh, but we've only got an output txt and don't need inputs. So let's just get to it:
 
-**TL;DR**
-
-Create a YAML
 
 ```
 Is Displayed Hello World:
@@ -71,6 +68,36 @@ Is Displayed Hello World:
 ```
 
 String is a type of data we would like to use. Is or Not is based on which state the 'Is Displayed Hello World' produces. 'Display' can be anything such as 'Msg' or 'Foo' or 'Bar.
+
+But what if we have to deal with inputs? Experience has tought us to create two separate files for this:
+
+**TL;DR**
+
+We store the files using a convention
+
+> File name: displayedhelloworld.displayedhelloworld.txt
+
+```
+Is Displayed Hello World:
+  - displayedhelloworld.input / Not Input
+  - displayedhelloworld.output / Is Output
+```
+
+We create a file which defines our inputs, but of course there are no inputs.
+
+> File name: displayedhelloworld.input.txt
+```
+Is Input:
+```
+
+Here's the file which defines our outputs.
+
+File name: displayedhelloworld.output.txt
+
+```
+Is Output:
+  - Is Display String
+```
 
 Are we done yet? That is actually it; just some grunt work left that's all. There's always a bit of grunt work! Here's what happens next (hold on to your seat tight):
 
