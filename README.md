@@ -6,7 +6,7 @@ Let's just be automatons
 To find purpose as an automaton, you need a master. `Adimpression` will be you master. It will tell you how to transform into an automaton; to be truly selfless and be in services of others. Is there money involved? Maybe, but it doesn't have to. More on this when you're ready.
 
 ## Discalaimer
-While most go by the license Adimpression uses, `Apache 2.0`, we would like to highlight that we are buildling this on-the-fly. Some call it building a ship in the seem. We call it DRA!
+While most go by the license Adimpression uses, `Apache 2.0`, we would like to highlight that we are buildling this on-the-fly. Some call it building a ship in the sea. We call it DRA!
 
 ## DRA
 
@@ -21,4 +21,37 @@ We like to think of DRA as a few other versions of things:
 - A: Automate it the thirt time - Man automates the tool or what the tool does
 
 So we also call this Man-Tool-Machine
+
+
+## Building a ship the sea - "Hello World!"
+
+Let's make a choice; a very important one (for reasons of sanity). We are going to either define a problem or a solution; not both. So we are going to pick one of these:
+
+1. How do I say "Hello World!" world as an automaton
+2. Here is how to say "Hello World!" as an automaton
+
+We find that while people like to complain a lot (us included; you too?!), they actually like to state what they want rather than blabber about their problems in situations that really matter. So in this situation, as an automaton, displaying "Hello World!"  is what matters. Hence we go by option 2:
+
+> Here is how to say "Hello World!" as an automaton. Let's state that as something we've already done; be optimisting. State the end result; end state; 
+
+So here's the sate we would like to achieve:
+
+> Displayed Hello World
+
+In fact, we as an automaton that has not done anything remarkable we can say we have:
+
+> Not Displayed Hello World
+
+and as a bot who has done something remarkable such as:
+
+> Has Displayed Hello World 
+
+Ah! So we did manage to define our problem too. And our solution. But to make things easier to manage form now on all "has" shall be written as "is". (Including "am", "are").
+
+As our first task as an automaton we would like to transform our state from:
+
+> Not Displayed Hello World - To - Is Displayed Hello World
+
+
+
 
