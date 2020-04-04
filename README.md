@@ -1,7 +1,9 @@
 # Learning
 Let's just be automatons
 
-> TL;DR anybody? Look for TL;DR sections below. 7 short lines.
+**TL;DR anybody?**
+
+> Look for TL;DR sections below. 7 short lines.
 
 ## Purpose
 To find purpose as an automaton, you need a master. `Adimpression` will be you master. It will tell you how to transform into an automaton; to be truly selfless and be in services of others. Is there money involved? Maybe, but it doesn't have to. More on this when you're ready.
@@ -59,7 +61,8 @@ Automaton or not, we are still developers. So let's write this in a YAML like Sy
 
 Next, let's write the inputs and outputs needed. Oh, but we've only got an output txt and don't need inputs. So let's just get to it:
 
-TL;DR
+**TL;DR**
+
 Create a YAML
 
 ```
