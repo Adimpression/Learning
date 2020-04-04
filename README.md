@@ -103,7 +103,85 @@ Are we done yet? That is actually it; just some grunt work left that's all. Ther
 
 **TL;DR**
 ```
-1. The YAML you wrote will go through this. It generates a .proto file.
+1. The YAML you wrote will go through this. It generates a few .proto files:
+
+
+./displayedhelloworld/displayedhelloworld/index.proto
+
+syntax = "proto3";
+package displayedhelloworld.displayedhelloworld;
+
+import "displayedhelloworld/input/index.proto";
+import "displayedhelloworld/output/index.proto";
+
+option java_multiple_files = true;
+
+service ToIsDisplayedHelloWorld { rpc Produce (NotDisplayedHelloWorld) returns (IsDisplayedHelloWorld) {} }
+
+message IsDisplayedHelloWorld {
+
+    NotDisplayedHelloWorld not = 1;
+
+    .displayedhelloworld.input.NotInput not_input = 1000000;
+    .displayedhelloworld.output.IsOutput is_output = 1000001;
+}
+
+message NotDisplayedHelloWorld {
+
+    IsDisplayedHelloWorld is = 1;
+
+    .displayedhelloworld.input.IsInput is_input = 1000000;
+    .displayedhelloworld.output.NotOutput not_output = 1000001;
+}
+
+./displayedhelloworld/input/index.proto
+
+syntax = "proto3";
+package displayedhelloworld.input;
+
+
+option java_multiple_files = true;
+
+service ToIsInput { rpc Produce (NotInput) returns (IsInput) {} }
+
+message IsInput {
+
+    NotInput not = 1;
+
+}
+
+message NotInput {
+
+    IsInput is = 1;
+
+}
+
+./displayedhelloworld/output/index.proto
+
+syntax = "proto3";
+package displayedhelloworld.output;
+
+
+option java_multiple_files = true;
+
+service ToIsOutput { rpc Produce (NotOutput) returns (IsOutput) {} }
+
+message IsOutput {
+
+    NotOutput not = 1;
+
+    string is_display_string = 2000000;
+}
+
+message NotOutput {
+
+    IsOutput is = 1;
+
+    string not_display_string = 2000000;
+}
+
+
+
 2. Then you will implement this: (few lines of code). Basically a gRPC service.
 3. Then you will build a docker image and push it to docker hub.
 4. Then you will create a file here and push it to github.
