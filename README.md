@@ -101,7 +101,7 @@ Is Output:
 
 Are we done yet? That is actually it; just some grunt work left that's all. There's always a bit of grunt work! Here's what happens next (hold on to your seat tight):
 
-TL;DR
+**TL;DR**
 ```
 1. The YAML you wrote will go through this. It generates a .proto file.
 2. Then you will implement this: (few lines of code). Basically a gRPC service.
