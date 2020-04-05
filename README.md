@@ -103,7 +103,7 @@ Are we done yet? That is actually it; just some grunt work left that's all. Ther
 
 **TL;DR**
 
-1. The YAML you wrote will go through this. It generates a few .proto files, which you can access publicly:
+1. The YAML you wrote will go through [this](https://github.com/Adimpression/Scarcity) automatically. It generates a few .proto files, which you can access publicly:
 
 displayedhelloworld.displayedhelloworld.txt => https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/displayedhelloworld/index.proto
 
