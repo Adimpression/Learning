@@ -102,12 +102,12 @@ Is Output:
 Are we done yet? That is actually it; just some grunt work left that's all. There's always a bit of grunt work! Here's what happens next (hold on to your seat tight):
 
 **TL;DR**
+
+1. The YAML you wrote will go through this. It generates a few .proto files, which you can access publicly:
+
+displayedhelloworld.displayedhelloworld.txt => https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/displayedhelloworld/index.proto
+
 ```
-1. The YAML you wrote will go through this. It generates a few .proto files:
-
-
-./displayedhelloworld/displayedhelloworld/index.proto
-
 syntax = "proto3";
 package displayedhelloworld.displayedhelloworld;
 
@@ -133,9 +133,11 @@ message NotDisplayedHelloWorld {
     .displayedhelloworld.input.IsInput is_input = 1000000;
     .displayedhelloworld.output.NotOutput not_output = 1000001;
 }
+```
 
-./displayedhelloworld/input/index.proto
+displayedhelloworld.input.txt => https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/input/index.proto
 
+```
 syntax = "proto3";
 package displayedhelloworld.input;
 
@@ -156,7 +158,10 @@ message NotInput {
 
 }
 
-./displayedhelloworld/output/index.proto
+```
+
+displayedhelloworld.output.txt => https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/output/index.proto
+```
 
 syntax = "proto3";
 package displayedhelloworld.output;
@@ -179,12 +184,15 @@ message NotOutput {
 
     string not_display_string = 2000000;
 }
+```
 
+To make this automatic, send a pull request to https://github.com/Adimpression/Dimensions (if you're trying out this tutorial, just add a few new lines (since these yamls already exists there).
 
+Once we approve the pull request, CI/CD will make the .proto available via the above bucket in a matter of minutes.
 
-2. Then you will implement this: (few lines of code). Basically a gRPC service.
-3. Then you will build a docker image and push it to docker hub.
-4. Then you will create a file here and push it to github.
+2. Then you will implement this: https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/displayedhelloworld/index.proto note the service. (few lines of code). Basically a gRPC service.
+3. Then you will build a docker image and push it to docker hub. It should be publicly available.
+4. Then you will create a file here and push it to github. (instructions coming up soon)
 5. Done. You are now an automaton that can say Hello World! to anybody, using any language gRPC supports. You are at their service!
 ```
 
