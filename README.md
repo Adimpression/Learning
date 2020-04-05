@@ -103,90 +103,9 @@ Are we done yet? That is actually it; just some grunt work left that's all. Ther
 
 **TL;DR**
 
-1. The YAML you wrote will go through [this](https://github.com/Adimpression/Scarcity) automatically. It generates a few .proto files, which you can access publicly:
+1. The YAML you wrote will go through [this](https://github.com/Adimpression/Scarcity) automatically. It generates a few .proto files, which you can access publicly [here](https://github.com/Adimpression/proto/tree/master/proto/displayedhelloworld):
 
-displayedhelloworld.displayedhelloworld.txt => https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/displayedhelloworld/index.proto
-
-```
-syntax = "proto3";
-package displayedhelloworld.displayedhelloworld;
-
-import "displayedhelloworld/input/index.proto";
-import "displayedhelloworld/output/index.proto";
-
-option java_multiple_files = true;
-
-service ToIsDisplayedHelloWorld { rpc Produce (NotDisplayedHelloWorld) returns (IsDisplayedHelloWorld) {} }
-
-message IsDisplayedHelloWorld {
-
-    NotDisplayedHelloWorld not = 1;
-
-    .displayedhelloworld.input.NotInput not_input = 1000000;
-    .displayedhelloworld.output.IsOutput is_output = 1000001;
-}
-
-message NotDisplayedHelloWorld {
-
-    IsDisplayedHelloWorld is = 1;
-
-    .displayedhelloworld.input.IsInput is_input = 1000000;
-    .displayedhelloworld.output.NotOutput not_output = 1000001;
-}
-```
-
-displayedhelloworld.input.txt => https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/input/index.proto
-
-```
-syntax = "proto3";
-package displayedhelloworld.input;
-
-
-option java_multiple_files = true;
-
-service ToIsInput { rpc Produce (NotInput) returns (IsInput) {} }
-
-message IsInput {
-
-    NotInput not = 1;
-
-}
-
-message NotInput {
-
-    IsInput is = 1;
-
-}
-
-```
-
-displayedhelloworld.output.txt => https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/output/index.proto
-```
-
-syntax = "proto3";
-package displayedhelloworld.output;
-
-
-option java_multiple_files = true;
-
-service ToIsOutput { rpc Produce (NotOutput) returns (IsOutput) {} }
-
-message IsOutput {
-
-    NotOutput not = 1;
-
-    string is_display_string = 2000000;
-}
-
-message NotOutput {
-
-    IsOutput is = 1;
-
-    string not_display_string = 2000000;
-}
-```
-
-To make this automatic, send a pull request to https://github.com/Adimpression/Dimensions (if you're trying out this tutorial, just add a few new lines (since these yamls already exists there).
+Send a pull request to https://github.com/Adimpression/Dimensions (if you're trying out this tutorial, just add a few new lines (since these yamls already exists there).
 
 Once we approve the pull request, CI/CD will make the .proto available via the above bucket in a matter of minutes.
 
