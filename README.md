@@ -114,7 +114,7 @@ Once we approve the pull request, CI/CD will make the .proto available via the a
 
 2. Then you will implement this (If you did some other message, it should appear accordingly): https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/displayedhelloworld/index.proto note the service. (few lines of code). Basically a gRPC service.
 3. Build  a docker image serving gRPC on port 8080. Push it to Docker Hub(public).
-4. Create a discovery file (pull request) [here]((https://github.com/Adimpression/Discovery/blob/master/displayedhelloworld.register.yaml) [Example] (https://github.com/Adimpression/Discovery/blob/master/displayedhelloworld.register.yaml) and send us a pull request. It is basically the image and tag (version) plus a few other configurations of which mainly needed are
+4. Create a discovery file (pull request) [here](https://github.com/Adimpression/Discovery/) and [example](https://github.com/Adimpression/Discovery/blob/master/displayedhelloworld.register.yaml) and send us a pull request. It is basically the image and tag (version) plus a few other configurations of which mainly needed are
 
 ```
   appState: 'IsDisplayedHelloWorld'
