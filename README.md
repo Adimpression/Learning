@@ -111,7 +111,12 @@ Once we approve the pull request, CI/CD will make the .proto available via the a
 
 2. Then you will implement this: https://storage.googleapis.com/dimensions.x.qs.fyi/displayedhelloworld/displayedhelloworld/index.proto note the service. (few lines of code). Basically a gRPC service.
 3. Then you will build a docker image and push it to docker hub. It should be publicly available.
-4. Then you will create a file here and push it to github. (instructions coming up soon)
-5. Done. You are now an automaton that can say Hello World! to anybody, using any language gRPC supports. You are at their service!
+4. Then you will create a file [here](https://github.com/Adimpression/Discovery/blob/master/displayedhelloworld.register.yaml) and push it to github. It is basically the image and tag (version) plus a few other configurations of which mainly needed are 
+
+  appState: 'IsDisplayedHelloWorld'
+  appName: 'displayedhelloworld'
+  appDomain: 'displayedhelloworld'
+  
+5. Done. You are now an automaton that can say Hello World! to anybody, using any language gRPC supports. You are at their service! To connect to this, you can use https://github.com/grpc/grpc-web based clients pointing to "s.qs.fyi". At the moment there is already a service running. Standard gRPC connections work too, but of course within the cluster. For that we need two services! Let's do that next :)
 ```
 
